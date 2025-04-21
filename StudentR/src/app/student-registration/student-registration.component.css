@@ -1,0 +1,178 @@
+/* General Styles */
+
+body {
+
+	font-family: Arial, sans-serif;
+
+	background-color: #f8f9fa;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+
+/* Container */
+
+.container {
+
+	max-width: 600px;
+
+	margin: 40px auto;
+
+	padding: 20px;
+
+	background: #ffffff;
+
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	border-radius: 8px;
+
+}
+
+
+/* Form Title */
+
+h2 {
+
+	text-align: center;
+
+	color: #007bff;
+
+}
+
+
+/* Form Labels */
+
+label {
+
+	font-weight: bold;
+
+	color: #333;
+
+}
+
+
+/* Form Inputs */
+
+input[type="text"],
+
+input[type="number"] {
+
+	width: 100%;
+
+	padding: 10px;
+
+	border: 1px solid #ced4da;
+
+	border-radius: 4px;
+
+	font-size: 16px;
+
+}
+
+
+/* Form Input Focus */
+
+input:focus {
+
+	border-color: #007bff;
+
+	outline: none;
+
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+}
+
+
+/* Error Messages */
+
+.text-danger {
+
+	font-size: 14px;
+
+	margin-top: 5px;
+
+}
+
+
+/* Button */
+
+.btn-primary {
+
+	width: 100%;
+
+	padding: 10px;
+
+	background: #007bff;
+
+	border: none;
+
+	color: white;
+
+	font-size: 16px;
+
+	cursor: pointer;
+
+	border-radius: 4px;
+
+	transition: 0.3s;
+
+}
+
+
+.btn-primary:hover {
+
+	background: #0056b3;
+
+}
+
+
+/* Greeting Message */
+
+.alert-info {
+
+	text-align: center;
+
+	font-size: 16px;
+
+	padding: 10px;
+
+	margin-top: 10px;
+
+	background: #e3f2fd;
+
+	border-left: 5px solid #007bff;
+
+	border-radius: 4px;
+
+}
+
+
+/* Student Data List */
+
+ul {
+
+	list-style-type: none;
+
+	padding: 0;
+
+}
+
+
+ul li {
+
+	padding: 10px;
+
+	border-bottom: 1px solid #ddd;
+
+}
+
+
+ul li:last-child {
+
+	border-bottom: none;
+
+}
+

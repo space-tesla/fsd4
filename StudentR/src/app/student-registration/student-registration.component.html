@@ -1,0 +1,89 @@
+<div class="container mt-4">
+
+	<h2 class="text-center text-primary">Student Registration</h2>
+
+
+	<form #studentForm="ngForm" (ngSubmit)="onSubmit()">
+
+    	<!-- First Name -->
+
+    	<div class="mb-3">
+
+        	<label>First Name:</label>
+
+        	<input type="text" name="firstName" class="form-control" [(ngModel)]="student.firstName" #firstName="ngModel"
+
+            	required pattern="^[A-Za-z]+$">
+
+        	<div *ngIf="firstName?.invalid && firstName?.touched">
+
+            	<small *ngIf="firstName?.errors?.['required']" class="text-danger">First Name is required.</small>
+
+            	<small *ngIf="firstName?.errors?.['pattern']" class="text-danger">Only alphabets allowed.</small>
+
+        	</div>
+
+    	</div>
+
+
+    	<!-- Last Name -->
+
+    	<div class="mb-3">
+
+        	<label>Last Name:</label>
+
+        	<input type="text" name="lastName" class="form-control" [(ngModel)]="student.lastName" #lastName="ngModel"
+
+            	required pattern="^[A-Za-z]+$">
+
+        	<div *ngIf="lastName?.invalid && lastName?.touched">
+
+            	<small *ngIf="lastName?.errors?.['required']" class="text-danger">Last Name is required.</small>
+
+            	<small *ngIf="lastName?.errors?.['pattern']" class="text-danger">Only alphabets allowed.</small>
+
+        	</div>
+
+    	</div>
+
+
+    	<!-- Age -->
+
+    	<div class="mb-3">
+
+        	<label>Age:</label>
+
+        	<input type="number" name="age" class="form-control" [(ngModel)]="student.age" #age="ngModel" required min="18" max="50">
+
+        	<div *ngIf="age?.invalid && age?.touched">
+
+            	<small *ngIf="age?.errors?.['required']" class="text-danger">Age is required.</small>
+
+            	<small *ngIf="age?.errors?.['min'] || age?.errors?.['max']" class="text-danger">Age must be between 18 and 50.</small>
+
+        	</div>
+
+    	</div>
+
+
+    	<!-- Greeting Message -->
+
+    	<div class="alert alert-info" *ngIf="showGreeting">
+
+        	{{ greetingMessage }}
+
+    	</div>
+
+
+    	<button type="submit" class="btn btn-primary" [disabled]="studentForm?.invalid">Register</button>
+
+	</form>
+
+
+	<hr>
+
+
+
+
+</div>
+
